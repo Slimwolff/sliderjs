@@ -41,14 +41,32 @@ function positionElements(){
 
 function forwardSlide(){
     
+
     let a = posSlide-1;
     let b = posSlide;
     let c = posSlide+1;
     
-    setLeftElement(cards[a]);
-    centerElement(cards[b]);
+    console.log(`slide position: ${posSlide}, cards length: ${cards.length}`);
+    console.log(`a: ${a}, b: ${b}, c: ${c} - posSlide: ${posSlide}`);
+    if(posSlide <= cards.length){
 
-    // posSlide++;
+        if(posSlide == cards.length){
+            
+        }else{
+            setLeftElement(cards[a]);
+            centerElement(cards[b]);
+            if(c == cards.length){
+
+            }else{
+                setRightElement(cards[c]);
+            }
+            posSlide++;
+        }
+       
+    }
+    
+
+    
 }
 
 function setLeftElement(e){
