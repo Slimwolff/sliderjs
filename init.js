@@ -5,8 +5,7 @@ let posSlide = 1;
 let subtract = 0;
 let width = cardCont.offsetWidth;
 let dots = document.querySelector('.dots-cont');
-let a = 1;
-a.toFixed(0);
+
 // return a string with rgba color - its just to view cards better
 function rgba(){
     let r = Math.floor(Math.random() * (255 - 0 + 1) + 0),
