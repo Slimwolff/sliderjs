@@ -4,8 +4,9 @@ let cards = cardCont.children;
 let posSlide = 1;
 let subtract = 0;
 let width = cardCont.offsetWidth;
-
-
+let dots = document.querySelector('.dots-cont');
+let a = 1;
+a.toFixed(0);
 // return a string with rgba color - its just to view cards better
 function rgba(){
     let r = Math.floor(Math.random() * (255 - 0 + 1) + 0),
@@ -84,5 +85,23 @@ function centerElement(e){
 }
 
 
+//create dots based on cards.length
+function createDots(){
+    let e = document.createElement('div');
+    e.classList.add('dots');
+    dots.appendChild(e);
+}
 
+function increaseDotsWidth(wid){
+    dots.style.width = `${wid}em`;
+}
+
+let dotsWidth = 1.5;
+
+for(let i=0; i<cards.length; i++){
+    dotsWidth += 1.5;
+    createDots();
+}
+
+increaseDotsWidth(dotsWidth);
 positionElements();
